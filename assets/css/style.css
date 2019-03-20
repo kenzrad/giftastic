@@ -1,0 +1,10 @@
+body {
+    background-color: black;
+}
+
+.gif-button {
+    height: 125px;
+    width: 125px;
+    margin: 1%;
+    cursor: pointer;
+}
