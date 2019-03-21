@@ -33,16 +33,22 @@ function generateBtn(currentBtn) {
     }
 }
 
-$(".gif-button").on("click", function() {
+$("#btn-container").on('click', ".gif-button", function() {
     console.log("clicked!");
-    var name = $(this.name);
-    var queryUrl = `https://api.giphy.com/v1/gifs/search?${name}&api_key=zVyDwVspu8j5Z5ZC0wZCfki71mHSaYur&q=&limit=10&offset=0&rating=PG-13&lang=en`
+
+    var name = $(this).attr("data-name");
+    console.log(name);
+    var queryUrl = `https://api.giphy.com/v1/gifs/search?api_key=zVyDwVspu8j5Z5ZC0wZCfki71mHSaYur&q=${name}&limit=10&offset=0&rating=PG-13&lang=en`
 
     $.ajax({
         url: queryUrl,
         method: "GET"
     }).then(function(response) {
-        console.log(response);
+        var gifs = response.data
+        for(i=0; i < gifs.length; i++) {
+            var gif = $(`<img class="gifs" alt="${name}-gif-${i}" src="${gifs[i].images.fixed_height.url}">`);
+            $("#display").append(gif);
+        }
     })
 });
   
@@ -52,3 +58,4 @@ $("#clear").on("click", function() {
     $("#display").empty();
 
 });
+
