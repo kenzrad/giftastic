@@ -24,7 +24,7 @@ $(document).ready(function() {
 function generateBtn(currentBtn) {
     for (var i = 0; i < currentBtn.length; i++) {
       var gifBtn = $("<img>");
-      gifBtn.addClass("gif-button");
+      gifBtn.addClass("gif-button page-gif-button");
       gifBtn.attr("data-name", currentBtn[i].name);
       gifBtn.attr("src", currentBtn[i].src);
       gifBtn.attr("alt", `${currentBtn[i].name} button`);
@@ -47,9 +47,18 @@ $("#btn-container").on('click', ".gif-button", function() {
         var gifs = response.data
         for(i=0; i < gifs.length; i++) {
             var gif = $(`<img class="gifs" alt="${name}-gif-${i}" src="${gifs[i].images.fixed_height.url}">`);
-            $("#display").append(gif);
+            $("#display").prepend(gif);
         }
     })
+});
+
+$("#input-btn").on('click', function() {
+    var userInput = $("#user-input").val().trim()
+    var userBtn = $(`<button>`)
+    userBtn.text(`${userInput}`);
+    userBtn.addClass("btn btn-info gif-button user-gif-button");
+    userBtn.attr("data-name", `${userInput} in space` )
+    $("#btn-container").append(userBtn);
 });
   
 

@@ -2,9 +2,21 @@ body {
     background-color: black;
 }
 
-.gif-button {
+.page-gif-button {
     height: 125px;
     width: 125px;
-    margin: 1%;
+    margin: 10px;
     cursor: pointer;
+}
+
+.user-gif-button {
+    height: 25px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.gifs {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
 }
