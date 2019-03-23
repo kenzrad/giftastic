@@ -21,6 +21,25 @@ body {
     margin: 10px;
 }
 
+
 .btn-container {
     min-height: 75px;
 };
+
+
+@media screen and (max-width: 640px) {
+    body {
+      margin: 0;
+    }
+
+    .gifs {
+        max-width: 600px;
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+        body {
+          margin: 0;
+        }
+    }
