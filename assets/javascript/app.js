@@ -38,10 +38,9 @@ function generateBtn(currentBtn) {
 }
 
 $(".btn-container").on('click', ".gif-button", function() {
-    //want to add some scrolling functionality for responsivness
-    // $('html, body').animate({
-    //     scrollTop: $("#display").offset().top
-    // }, 2000);
+    $('html, body').animate({
+        scrollTop: $("#display").offset().top
+    }, 500);
 
     var name = $(this).attr("data-name");
     var queryUrl = `https://api.giphy.com/v1/gifs/search?api_key=zVyDwVspu8j5Z5ZC0wZCfki71mHSaYur&q=${name}&limit=12&offset=0&rating=PG-13&lang=en`
