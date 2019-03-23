@@ -10,8 +10,8 @@ body {
 }
 
 .user-gif-button {
-    height: 25px;
     margin: 10px;
+    padding: 10px;
     cursor: pointer;
 }
 
@@ -20,3 +20,7 @@ body {
     height: 200px;
     margin: 10px;
 }
+
+.btn-container {
+    min-height: 75px;
+};
