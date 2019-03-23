@@ -20,6 +20,7 @@ var seriousBtn = [
 ];
 
 
+//formatted as such if I wanted to add different button types but run the same function
 $(document).ready(function() {
     generateBtn(seriousBtn);
 });
@@ -37,17 +38,18 @@ function generateBtn(currentBtn) {
 }
 
 $(".btn-container").on('click', ".gif-button", function() {
-    console.log("clicked!");
+    //want to add some scrolling functionality for responsivness
+    // $('html, body').animate({
+    //     scrollTop: $("#display").offset().top
+    // }, 2000);
 
     var name = $(this).attr("data-name");
-    console.log(name);
     var queryUrl = `https://api.giphy.com/v1/gifs/search?api_key=zVyDwVspu8j5Z5ZC0wZCfki71mHSaYur&q=${name}&limit=12&offset=0&rating=PG-13&lang=en`
 
     $.ajax({
         url: queryUrl,
         method: "GET"
     }).then(function(response) {
-        console.log(response);
         var gifs = response.data
         for(i=0; i < gifs.length; i++) {
             var rating = gifs[i].rating;
@@ -70,9 +72,7 @@ $(".btn-container").on('click', ".gif-button", function() {
 });
 
 $("#display").on("click", ".gifs", function() {
-    console.log("I clicked a diff!")
     var state = $(this).attr("data-state");
-    console.log(state);
     if (state === "still") {
       $(this).attr("src", $(this).attr("data-animate"));
       $(this).attr("data-state", "animate");
@@ -95,9 +95,9 @@ $("#input-btn").on('click', function(event) {
 });
   
 
-//clear button to remove gifs
-$("#clear").on("click", function() {
-    $("#display").empty();
+//clear button to remove gifs (considering)
+// $("#clear").on("click", function() {
+//     $("#display").empty();
 
-});
+// });
 
