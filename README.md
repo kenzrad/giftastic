@@ -13,7 +13,7 @@ Clicking on these buttons initiates a GIPHY API search for that item <b>IN SPACE
         
 These picture-buttons are built into the app, but the user can also create their own buttons but using the "in space" input. 
 
-![user_button](/assets/images//readMe/user_buttons.png)
+![user_button](/assets/images//readMe/user_button.png)
 
 Type in what you want to put in space, then click on the generated button to see what Giphy has to offer! If you get overzealous with button creation (or just want to start over), simply click "nvm" and your buttons will be removed!
 
