@@ -1,9 +1,12 @@
 ![SPACE](/assets/images/readMe/spacetitlewhite.png)
-<b>Stuff in Space</b> is a giftastic app that uses the GIPHY API to dynamically populate space-themed gifs on your screen. 
+#
 
-### Using the App
+###<b>Stuff in Space</b> is a giftastic app that uses the GIPHY API to dynamically populate space-themed gifs on your screen. 
+
+## Using the App
 
 The pictures on the top of the page are buttons dynamically generated with JavaScript and JQuery. 
+
 ![image_button](/assets/images//readMe/img_buttons.png)
 
 Clicking on these buttons initiates a GIPHY API search for that item <b>IN SPACE</b>!
