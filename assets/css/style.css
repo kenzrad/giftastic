@@ -2,6 +2,11 @@ body {
     background-color:  black;
 }
 
+.title-click{
+    cursor: pointer;
+}
+
+
 .page-gif-button {
     height: 125px;
     width: 125px;
@@ -25,6 +30,7 @@ body {
 .btn-container {
     min-height: 75px;
 };
+
 
 
 @media screen and (max-width: 640px) {

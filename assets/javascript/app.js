@@ -43,7 +43,8 @@ $(".btn-container").on('click', ".gif-button", function() {
     }, 500);
 
     var name = $(this).attr("data-name");
-    var queryUrl = `https://api.giphy.com/v1/gifs/search?api_key=zVyDwVspu8j5Z5ZC0wZCfki71mHSaYur&q=${name}&limit=12&offset=0&rating=PG-13&lang=en`
+    var key = "GMDX20EBtJD3CIpvd4ECT4g1zYlzeBIT"
+    var queryUrl = `https://api.giphy.com/v1/gifs/search?api_key=${key}&q=${name}&limit=12&offset=0&rating=PG-13&lang=en`
 
     $.ajax({
         url: queryUrl,
@@ -94,9 +95,13 @@ $("#input-btn").on('click', function(event) {
 });
   
 
-//clear button to remove gifs (considering)
-// $("#clear").on("click", function() {
-//     $("#display").empty();
+//clear button to remove gifs
+$("#clear-gif").on("click", function() {
+    $("#display").empty();
 
-// });
+});
+
+$("#clear-btn").on("click", function() {
+    $("#user-container").empty();
+});
 
