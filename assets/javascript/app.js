@@ -43,7 +43,7 @@ $(".btn-container").on('click', ".gif-button", function() {
     }, 500);
 
     var name = $(this).attr("data-name");
-    var key = "GMDX20EBtJD3CIpvd4ECT4g1zYlzeBIT"
+    var key = "tPILgl0o90qajwdip7WFRu6aZw9Neejs"
     var queryUrl = `https://api.giphy.com/v1/gifs/search?api_key=${key}&q=${name}&limit=12&offset=0&rating=PG-13&lang=en`
 
     $.ajax({
